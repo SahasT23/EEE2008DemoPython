@@ -1,0 +1,396 @@
+--------------------------------------------------------------------------------
+Command:            ./GEMM
+Massif arguments:   (none)
+ms_print arguments: massif.out.143188
+--------------------------------------------------------------------------------
+
+
+    KB
+239.9^                                                :::::::::::::::::::::::#
+     |                                                :                      #
+     |                                                :                      #
+     |                                                :                      #
+     |                              ::::::::::::::::::@                      #
+     |                              :                 @                      #
+     |                              :                 @                      #
+     |                              :                 @                      #
+     |                  ::::::::::::@                 @                      #
+     |                  :           @                 @                      #
+     |          ::::::::@           @                 @                      #
+     |          :       @           @                 @                      #
+     |          :       @           @                 @                      #
+     |     :::::@       @           @                 @                      #
+     |     :    @       @           @                 @                      #
+     |  :::@    @       @           @                 @                      #
+     |  :  @    @       @           @                 @                      #
+     |::@  @    @       @           @                 @                      #
+     |@ @  @    @       @           @                 @                      #
+     |@ @  @    @       @           @                 @                      #
+   0 +----------------------------------------------------------------------->Gi
+     0                                                                   2.020
+
+Number of snapshots: 77
+ Detailed snapshots: [7, 14, 21, 28, 35, 42, 49, 56, 63, 70 (peak)]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1        202,778              488              472            16            0
+  2        203,397            4,592            4,568            24            0
+  3        209,305            5,624            5,592            32            0
+  4        212,349            6,432            6,392            40            0
+  5        212,393            7,240            7,192            48            0
+  6        212,437            8,048            7,992            56            0
+  7      1,021,519            8,048            7,992            56            0
+99.30% (7,992B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->63.62% (5,120B) 0x48E91B4: _IO_file_doallocate (filedoalloc.c:101)
+| ->63.62% (5,120B) 0x48F9523: _IO_doallocbuf (genops.c:347)
+|   ->63.62% (5,120B) 0x48F6F8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->63.62% (5,120B) 0x48F7AAE: _IO_new_file_xsputn (fileops.c:1244)
+|       ->63.62% (5,120B) 0x48F7AAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|         ->50.89% (4,096B) 0x48EAA11: fwrite (iofwrite.c:39)
+|         | ->50.89% (4,096B) 0x109F8F: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|         |   
+|         ->12.72% (1,024B) 0x48C4CC8: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+|           ->12.72% (1,024B) 0x48C4CC8: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+|             ->12.72% (1,024B) 0x48CF742: __vfprintf_internal (vfprintf-internal.c:1545)
+|               ->12.72% (1,024B) 0x48C41B2: printf (printf.c:33)
+|                 ->12.72% (1,024B) 0x10A063: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|                   
+->09.94% (800B) 0x109436: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+| ->09.94% (800B) 0x10A0BB: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|   
+->09.94% (800B) 0x109455: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+| ->09.94% (800B) 0x10A0BB: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|   
+->09.94% (800B) 0x109474: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+| ->09.94% (800B) 0x10A0BB: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|   
+->05.86% (472B) 0x48E9E7E: __fopen_internal (iofopen.c:65)
+  ->05.86% (472B) 0x48E9E7E: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+    ->05.86% (472B) 0x109F2E: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+      
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  8      1,021,519            7,240            7,192            48            0
+  9      1,021,550            6,432            6,392            40            0
+ 10      1,021,581            5,624            5,592            32            0
+ 11      1,023,434            8,832            8,792            40            0
+ 12      1,023,478           12,040           11,992            48            0
+ 13      1,023,522           15,248           15,192            56            0
+ 14      6,995,742           15,248           15,192            56            0
+99.63% (15,192B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->33.58% (5,120B) 0x48E91B4: _IO_file_doallocate (filedoalloc.c:101)
+| ->33.58% (5,120B) 0x48F9523: _IO_doallocbuf (genops.c:347)
+|   ->33.58% (5,120B) 0x48F6F8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->33.58% (5,120B) 0x48F7AAE: _IO_new_file_xsputn (fileops.c:1244)
+|       ->33.58% (5,120B) 0x48F7AAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|         ->26.86% (4,096B) 0x48EAA11: fwrite (iofwrite.c:39)
+|         | ->26.86% (4,096B) 0x109F8F: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|         |   
+|         ->06.72% (1,024B) 0x48C4CC8: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+|           ->06.72% (1,024B) 0x48C4CC8: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+|             ->06.72% (1,024B) 0x48CF742: __vfprintf_internal (vfprintf-internal.c:1545)
+|               ->06.72% (1,024B) 0x48C41B2: printf (printf.c:33)
+|                 ->06.72% (1,024B) 0x10A063: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|                   
+->20.99% (3,200B) 0x109436: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+| ->20.99% (3,200B) 0x10A0BB: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|   
+->20.99% (3,200B) 0x109455: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+| ->20.99% (3,200B) 0x10A0BB: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|   
+->20.99% (3,200B) 0x109474: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+| ->20.99% (3,200B) 0x10A0BB: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|   
+->03.10% (472B) 0x48E9E7E: __fopen_internal (iofopen.c:65)
+  ->03.10% (472B) 0x48E9E7E: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+    ->03.10% (472B) 0x109F2E: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+      
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 15      6,995,742           12,040           11,992            48            0
+ 16      6,995,773            8,832            8,792            40            0
+ 17      6,995,804            5,624            5,592            32            0
+ 18      6,997,657           12,832           12,792            40            0
+ 19      6,997,701           20,040           19,992            48            0
+ 20      6,997,745           27,248           27,192            56            0
+ 21     26,766,967           27,248           27,192            56            0
+99.79% (27,192B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->26.42% (7,200B) 0x109436: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+| ->26.42% (7,200B) 0x10A0BB: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|   
+->26.42% (7,200B) 0x109455: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+| ->26.42% (7,200B) 0x10A0BB: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|   
+->26.42% (7,200B) 0x109474: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+| ->26.42% (7,200B) 0x10A0BB: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|   
+->18.79% (5,120B) 0x48E91B4: _IO_file_doallocate (filedoalloc.c:101)
+| ->18.79% (5,120B) 0x48F9523: _IO_doallocbuf (genops.c:347)
+|   ->18.79% (5,120B) 0x48F6F8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->18.79% (5,120B) 0x48F7AAE: _IO_new_file_xsputn (fileops.c:1244)
+|       ->18.79% (5,120B) 0x48F7AAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|         ->15.03% (4,096B) 0x48EAA11: fwrite (iofwrite.c:39)
+|         | ->15.03% (4,096B) 0x109F8F: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|         |   
+|         ->03.76% (1,024B) 0x48C4CC8: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+|           ->03.76% (1,024B) 0x48C4CC8: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+|             ->03.76% (1,024B) 0x48CF742: __vfprintf_internal (vfprintf-internal.c:1545)
+|               ->03.76% (1,024B) 0x48C41B2: printf (printf.c:33)
+|                 ->03.76% (1,024B) 0x10A063: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|                   
+->01.73% (472B) 0x48E9E7E: __fopen_internal (iofopen.c:65)
+  ->01.73% (472B) 0x48E9E7E: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+    ->01.73% (472B) 0x109F2E: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+      
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 22     26,766,967           20,040           19,992            48            0
+ 23     26,766,998           12,832           12,792            40            0
+ 24     26,767,029            5,624            5,592            32            0
+ 25     26,768,882           18,432           18,392            40            0
+ 26     26,768,926           31,240           31,192            48            0
+ 27     26,768,970           44,048           43,992            56            0
+ 28     73,216,319           44,048           43,992            56            0
+99.87% (43,992B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->29.06% (12,800B) 0x109436: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+| ->29.06% (12,800B) 0x10A0BB: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|   
+->29.06% (12,800B) 0x109455: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+| ->29.06% (12,800B) 0x10A0BB: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|   
+->29.06% (12,800B) 0x109474: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+| ->29.06% (12,800B) 0x10A0BB: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|   
+->11.62% (5,120B) 0x48E91B4: _IO_file_doallocate (filedoalloc.c:101)
+| ->11.62% (5,120B) 0x48F9523: _IO_doallocbuf (genops.c:347)
+|   ->11.62% (5,120B) 0x48F6F8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->11.62% (5,120B) 0x48F7AAE: _IO_new_file_xsputn (fileops.c:1244)
+|       ->11.62% (5,120B) 0x48F7AAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|         ->09.30% (4,096B) 0x48EAA11: fwrite (iofwrite.c:39)
+|         | ->09.30% (4,096B) 0x109F8F: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|         |   
+|         ->02.32% (1,024B) 0x48C4CC8: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+|           ->02.32% (1,024B) 0x48C4CC8: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+|             ->02.32% (1,024B) 0x48CF742: __vfprintf_internal (vfprintf-internal.c:1545)
+|               ->02.32% (1,024B) 0x48C41B2: printf (printf.c:33)
+|                 ->02.32% (1,024B) 0x10A063: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|                   
+->01.07% (472B) 0x48E9E7E: __fopen_internal (iofopen.c:65)
+  ->01.07% (472B) 0x48E9E7E: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+    ->01.07% (472B) 0x109F2E: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+      
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 29     73,216,319           31,240           31,192            48            0
+ 30     73,216,350           18,432           18,392            40            0
+ 31     73,216,381            5,624            5,592            32            0
+ 32     73,218,234           25,632           25,592            40            0
+ 33     73,218,278           45,640           45,592            48            0
+ 34     73,218,322           65,648           65,592            56            0
+ 35    163,469,867           65,648           65,592            56            0
+99.91% (65,592B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->30.47% (20,000B) 0x109436: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+| ->30.47% (20,000B) 0x10A0BB: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|   
+->30.47% (20,000B) 0x109455: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+| ->30.47% (20,000B) 0x10A0BB: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|   
+->30.47% (20,000B) 0x109474: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+| ->30.47% (20,000B) 0x10A0BB: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|   
+->07.80% (5,120B) 0x48E91B4: _IO_file_doallocate (filedoalloc.c:101)
+| ->07.80% (5,120B) 0x48F9523: _IO_doallocbuf (genops.c:347)
+|   ->07.80% (5,120B) 0x48F6F8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->07.80% (5,120B) 0x48F7AAE: _IO_new_file_xsputn (fileops.c:1244)
+|       ->07.80% (5,120B) 0x48F7AAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|         ->06.24% (4,096B) 0x48EAA11: fwrite (iofwrite.c:39)
+|         | ->06.24% (4,096B) 0x109F8F: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|         |   
+|         ->01.56% (1,024B) 0x48C4CC8: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+|           ->01.56% (1,024B) 0x48C4CC8: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+|             ->01.56% (1,024B) 0x48CF742: __vfprintf_internal (vfprintf-internal.c:1545)
+|               ->01.56% (1,024B) 0x48C41B2: printf (printf.c:33)
+|                 ->01.56% (1,024B) 0x10A063: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|                   
+->00.72% (472B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 36    163,469,867           45,640           45,592            48            0
+ 37    163,469,898           25,632           25,592            40            0
+ 38    163,469,929            5,624            5,592            32            0
+ 39    163,471,782           34,432           34,392            40            0
+ 40    163,471,826           63,240           63,192            48            0
+ 41    163,471,870           92,048           91,992            56            0
+ 42    318,905,697           92,048           91,992            56            0
+99.94% (91,992B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->31.29% (28,800B) 0x109436: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+| ->31.29% (28,800B) 0x10A0BB: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|   
+->31.29% (28,800B) 0x109455: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+| ->31.29% (28,800B) 0x10A0BB: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|   
+->31.29% (28,800B) 0x109474: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+| ->31.29% (28,800B) 0x10A0BB: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|   
+->05.56% (5,120B) 0x48E91B4: _IO_file_doallocate (filedoalloc.c:101)
+| ->05.56% (5,120B) 0x48F9523: _IO_doallocbuf (genops.c:347)
+|   ->05.56% (5,120B) 0x48F6F8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->05.56% (5,120B) 0x48F7AAE: _IO_new_file_xsputn (fileops.c:1244)
+|       ->05.56% (5,120B) 0x48F7AAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|         ->04.45% (4,096B) 0x48EAA11: fwrite (iofwrite.c:39)
+|         | ->04.45% (4,096B) 0x109F8F: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|         |   
+|         ->01.11% (1,024B) 0x48C4CC8: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+|           ->01.11% (1,024B) 0x48C4CC8: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+|             ->01.11% (1,024B) 0x48CF742: __vfprintf_internal (vfprintf-internal.c:1545)
+|               ->01.11% (1,024B) 0x48C41B2: printf (printf.c:33)
+|                 ->01.11% (1,024B) 0x10A063: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|                   
+->00.51% (472B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 43    318,905,697           63,240           63,192            48            0
+ 44    318,905,728           34,432           34,392            40            0
+ 45    318,905,759            5,624            5,592            32            0
+ 46    318,907,612           44,832           44,792            40            0
+ 47    318,907,656           84,040           83,992            48            0
+ 48    318,907,700          123,248          123,192            56            0
+ 49    565,148,518          123,248          123,192            56            0
+99.95% (123,192B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->31.81% (39,200B) 0x109436: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+| ->31.81% (39,200B) 0x10A0BB: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|   
+->31.81% (39,200B) 0x109455: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+| ->31.81% (39,200B) 0x10A0BB: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|   
+->31.81% (39,200B) 0x109474: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+| ->31.81% (39,200B) 0x10A0BB: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|   
+->04.15% (5,120B) 0x48E91B4: _IO_file_doallocate (filedoalloc.c:101)
+| ->04.15% (5,120B) 0x48F9523: _IO_doallocbuf (genops.c:347)
+|   ->04.15% (5,120B) 0x48F6F8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->04.15% (5,120B) 0x48F7AAE: _IO_new_file_xsputn (fileops.c:1244)
+|       ->04.15% (5,120B) 0x48F7AAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|         ->03.32% (4,096B) 0x48EAA11: fwrite (iofwrite.c:39)
+|         | ->03.32% (4,096B) 0x109F8F: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|         |   
+|         ->00.83% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->00.38% (472B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 50    565,148,518           84,040           83,992            48            0
+ 51    565,148,549           44,832           44,792            40            0
+ 52    565,148,580            5,624            5,592            32            0
+ 53    565,150,433           56,832           56,792            40            0
+ 54    565,150,477          108,040          107,992            48            0
+ 55    565,150,521          159,248          159,192            56            0
+ 56    932,070,992          159,248          159,192            56            0
+99.96% (159,192B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->32.15% (51,200B) 0x109436: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+| ->32.15% (51,200B) 0x10A0BB: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|   
+->32.15% (51,200B) 0x109455: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+| ->32.15% (51,200B) 0x10A0BB: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|   
+->32.15% (51,200B) 0x109474: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+| ->32.15% (51,200B) 0x10A0BB: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|   
+->03.22% (5,120B) 0x48E91B4: _IO_file_doallocate (filedoalloc.c:101)
+| ->03.22% (5,120B) 0x48F9523: _IO_doallocbuf (genops.c:347)
+|   ->03.22% (5,120B) 0x48F6F8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->03.22% (5,120B) 0x48F7AAE: _IO_new_file_xsputn (fileops.c:1244)
+|       ->03.22% (5,120B) 0x48F7AAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|         ->02.57% (4,096B) 0x48EAA11: fwrite (iofwrite.c:39)
+|         | ->02.57% (4,096B) 0x109F8F: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|         |   
+|         ->00.64% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->00.30% (472B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 57    932,070,992          108,040          107,992            48            0
+ 58    932,071,023           56,832           56,792            40            0
+ 59    932,071,054            5,624            5,592            32            0
+ 60    932,072,907           70,432           70,392            40            0
+ 61    932,072,951          135,240          135,192            48            0
+ 62    932,072,995          200,048          199,992            56            0
+ 63  1,453,793,605          200,048          199,992            56            0
+99.97% (199,992B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->32.39% (64,800B) 0x109436: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+| ->32.39% (64,800B) 0x10A0BB: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|   
+->32.39% (64,800B) 0x109455: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+| ->32.39% (64,800B) 0x10A0BB: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|   
+->32.39% (64,800B) 0x109474: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+| ->32.39% (64,800B) 0x10A0BB: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|   
+->02.56% (5,120B) 0x48E91B4: _IO_file_doallocate (filedoalloc.c:101)
+| ->02.56% (5,120B) 0x48F9523: _IO_doallocbuf (genops.c:347)
+|   ->02.56% (5,120B) 0x48F6F8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->02.56% (5,120B) 0x48F7AAE: _IO_new_file_xsputn (fileops.c:1244)
+|       ->02.56% (5,120B) 0x48F7AAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|         ->02.05% (4,096B) 0x48EAA11: fwrite (iofwrite.c:39)
+|         | ->02.05% (4,096B) 0x109F8F: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|         |   
+|         ->00.51% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->00.24% (472B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 64  1,453,793,605          135,240          135,192            48            0
+ 65  1,453,793,636           70,432           70,392            40            0
+ 66  1,453,793,667            5,624            5,592            32            0
+ 67  1,453,795,562           85,632           85,592            40            0
+ 68  1,453,795,606          165,640          165,592            48            0
+ 69  1,453,795,650          245,648          245,592            56            0
+ 70  2,168,685,713          245,648          245,592            56            0
+99.98% (245,592B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->32.57% (80,000B) 0x109436: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+| ->32.57% (80,000B) 0x10A0BB: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|   
+->32.57% (80,000B) 0x109455: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+| ->32.57% (80,000B) 0x10A0BB: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|   
+->32.57% (80,000B) 0x109474: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+| ->32.57% (80,000B) 0x10A0BB: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|   
+->02.08% (5,120B) 0x48E91B4: _IO_file_doallocate (filedoalloc.c:101)
+| ->02.08% (5,120B) 0x48F9523: _IO_doallocbuf (genops.c:347)
+|   ->02.08% (5,120B) 0x48F6F8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->02.08% (5,120B) 0x48F7AAE: _IO_new_file_xsputn (fileops.c:1244)
+|       ->02.08% (5,120B) 0x48F7AAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|         ->01.67% (4,096B) 0x48EAA11: fwrite (iofwrite.c:39)
+|         | ->01.67% (4,096B) 0x109F8F: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+|         |   
+|         ->00.42% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->00.19% (472B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 71  2,168,685,713          165,640          165,592            48            0
+ 72  2,168,685,744           85,632           85,592            40            0
+ 73  2,168,685,775            5,624            5,592            32            0
+ 74  2,168,686,041            1,520            1,496            24            0
+ 75  2,168,686,179            1,032            1,024             8            0
+ 76  2,168,695,091                0                0             0            0

@@ -1,0 +1,811 @@
+desc: (none)
+cmd: ./GEMM
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=201692
+mem_heap_B=472
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=202311
+mem_heap_B=4568
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=206653
+mem_heap_B=5592
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=209697
+mem_heap_B=6392
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=209741
+mem_heap_B=7192
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=209785
+mem_heap_B=7992
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=1012883
+mem_heap_B=7992
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=detailed
+n5: 7992 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5120 0x48EA1B4: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 5120 0x48FA523: _IO_doallocbuf (genops.c:347)
+   n1: 5120 0x48F7F8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 5120 0x48F8AAE: _IO_new_file_xsputn (fileops.c:1244)
+     n2: 5120 0x48F8AAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 4096 0x48EBA11: fwrite (iofwrite.c:39)
+       n0: 4096 0x109DC8: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+      n1: 1024 0x48C5CC8: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+       n1: 1024 0x48C5CC8: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+        n1: 1024 0x48D0742: __vfprintf_internal (vfprintf-internal.c:1545)
+         n1: 1024 0x48C51B2: printf (printf.c:33)
+          n0: 1024 0x109E92: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 800 0x1093CA: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+  n0: 800 0x109EEA: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 800 0x1093E9: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+  n0: 800 0x109EEA: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 800 0x109408: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+  n0: 800 0x109EEA: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 472 0x48EAE7E: __fopen_internal (iofopen.c:65)
+  n1: 472 0x48EAE7E: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+   n0: 472 0x109D67: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+#-----------
+snapshot=8
+#-----------
+time=1012883
+mem_heap_B=7192
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=1012914
+mem_heap_B=6392
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=1012945
+mem_heap_B=5592
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=1014798
+mem_heap_B=8792
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=1014842
+mem_heap_B=11992
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=1014886
+mem_heap_B=15192
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=6981038
+mem_heap_B=15192
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=detailed
+n5: 15192 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5120 0x48EA1B4: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 5120 0x48FA523: _IO_doallocbuf (genops.c:347)
+   n1: 5120 0x48F7F8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 5120 0x48F8AAE: _IO_new_file_xsputn (fileops.c:1244)
+     n2: 5120 0x48F8AAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 4096 0x48EBA11: fwrite (iofwrite.c:39)
+       n0: 4096 0x109DC8: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+      n1: 1024 0x48C5CC8: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+       n1: 1024 0x48C5CC8: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+        n1: 1024 0x48D0742: __vfprintf_internal (vfprintf-internal.c:1545)
+         n1: 1024 0x48C51B2: printf (printf.c:33)
+          n0: 1024 0x109E92: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 3200 0x1093CA: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+  n0: 3200 0x109EEA: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 3200 0x1093E9: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+  n0: 3200 0x109EEA: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 3200 0x109408: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+  n0: 3200 0x109EEA: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 472 0x48EAE7E: __fopen_internal (iofopen.c:65)
+  n1: 472 0x48EAE7E: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+   n0: 472 0x109D67: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+#-----------
+snapshot=15
+#-----------
+time=6981038
+mem_heap_B=11992
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=6981069
+mem_heap_B=8792
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=6981100
+mem_heap_B=5592
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=6982953
+mem_heap_B=12792
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=6982997
+mem_heap_B=19992
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=6983041
+mem_heap_B=27192
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=26745117
+mem_heap_B=27192
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=detailed
+n5: 27192 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 7200 0x1093CA: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+  n0: 7200 0x109EEA: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 7200 0x1093E9: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+  n0: 7200 0x109EEA: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 7200 0x109408: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+  n0: 7200 0x109EEA: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 5120 0x48EA1B4: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 5120 0x48FA523: _IO_doallocbuf (genops.c:347)
+   n1: 5120 0x48F7F8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 5120 0x48F8AAE: _IO_new_file_xsputn (fileops.c:1244)
+     n2: 5120 0x48F8AAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 4096 0x48EBA11: fwrite (iofwrite.c:39)
+       n0: 4096 0x109DC8: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+      n1: 1024 0x48C5CC8: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+       n1: 1024 0x48C5CC8: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+        n1: 1024 0x48D0742: __vfprintf_internal (vfprintf-internal.c:1545)
+         n1: 1024 0x48C51B2: printf (printf.c:33)
+          n0: 1024 0x109E92: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 472 0x48EAE7E: __fopen_internal (iofopen.c:65)
+  n1: 472 0x48EAE7E: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+   n0: 472 0x109D67: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+#-----------
+snapshot=22
+#-----------
+time=26745117
+mem_heap_B=19992
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=26745148
+mem_heap_B=12792
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=26745179
+mem_heap_B=5592
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=26747032
+mem_heap_B=18392
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=26747076
+mem_heap_B=31192
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=26747120
+mem_heap_B=43992
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=73188837
+mem_heap_B=43992
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=detailed
+n5: 43992 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 12800 0x1093CA: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+  n0: 12800 0x109EEA: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 12800 0x1093E9: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+  n0: 12800 0x109EEA: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 12800 0x109408: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+  n0: 12800 0x109EEA: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 5120 0x48EA1B4: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 5120 0x48FA523: _IO_doallocbuf (genops.c:347)
+   n1: 5120 0x48F7F8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 5120 0x48F8AAE: _IO_new_file_xsputn (fileops.c:1244)
+     n2: 5120 0x48F8AAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 4096 0x48EBA11: fwrite (iofwrite.c:39)
+       n0: 4096 0x109DC8: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+      n1: 1024 0x48C5CC8: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+       n1: 1024 0x48C5CC8: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+        n1: 1024 0x48D0742: __vfprintf_internal (vfprintf-internal.c:1545)
+         n1: 1024 0x48C51B2: printf (printf.c:33)
+          n0: 1024 0x109E92: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 472 0x48EAE7E: __fopen_internal (iofopen.c:65)
+  n1: 472 0x48EAE7E: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+   n0: 472 0x109D67: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+#-----------
+snapshot=29
+#-----------
+time=73188837
+mem_heap_B=31192
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=73188868
+mem_heap_B=18392
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=73188899
+mem_heap_B=5592
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=73190752
+mem_heap_B=25592
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=73190796
+mem_heap_B=45592
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=73190840
+mem_heap_B=65592
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=163436377
+mem_heap_B=65592
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=detailed
+n5: 65592 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 20000 0x1093CA: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+  n0: 20000 0x109EEA: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 20000 0x1093E9: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+  n0: 20000 0x109EEA: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 20000 0x109408: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+  n0: 20000 0x109EEA: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 5120 0x48EA1B4: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 5120 0x48FA523: _IO_doallocbuf (genops.c:347)
+   n1: 5120 0x48F7F8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 5120 0x48F8AAE: _IO_new_file_xsputn (fileops.c:1244)
+     n2: 5120 0x48F8AAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 4096 0x48EBA11: fwrite (iofwrite.c:39)
+       n0: 4096 0x109DC8: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+      n1: 1024 0x48C5CC8: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+       n1: 1024 0x48C5CC8: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+        n1: 1024 0x48D0742: __vfprintf_internal (vfprintf-internal.c:1545)
+         n1: 1024 0x48C51B2: printf (printf.c:33)
+          n0: 1024 0x109E92: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n0: 472 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=36
+#-----------
+time=163436377
+mem_heap_B=45592
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=163436408
+mem_heap_B=25592
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=163436439
+mem_heap_B=5592
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=163438292
+mem_heap_B=34392
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=163438336
+mem_heap_B=63192
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=163438380
+mem_heap_B=91992
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=318866099
+mem_heap_B=91992
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=detailed
+n5: 91992 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 28800 0x1093CA: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+  n0: 28800 0x109EEA: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 28800 0x1093E9: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+  n0: 28800 0x109EEA: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 28800 0x109408: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+  n0: 28800 0x109EEA: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 5120 0x48EA1B4: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 5120 0x48FA523: _IO_doallocbuf (genops.c:347)
+   n1: 5120 0x48F7F8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 5120 0x48F8AAE: _IO_new_file_xsputn (fileops.c:1244)
+     n2: 5120 0x48F8AAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 4096 0x48EBA11: fwrite (iofwrite.c:39)
+       n0: 4096 0x109DC8: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+      n1: 1024 0x48C5CC8: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+       n1: 1024 0x48C5CC8: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+        n1: 1024 0x48D0742: __vfprintf_internal (vfprintf-internal.c:1545)
+         n1: 1024 0x48C51B2: printf (printf.c:33)
+          n0: 1024 0x109E92: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n0: 472 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=43
+#-----------
+time=318866099
+mem_heap_B=63192
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=318866130
+mem_heap_B=34392
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=318866161
+mem_heap_B=5592
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=318868014
+mem_heap_B=44792
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=318868058
+mem_heap_B=83992
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=318868102
+mem_heap_B=123192
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=565102776
+mem_heap_B=123192
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=detailed
+n5: 123192 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 39200 0x1093CA: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+  n0: 39200 0x109EEA: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 39200 0x1093E9: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+  n0: 39200 0x109EEA: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 39200 0x109408: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+  n0: 39200 0x109EEA: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 5120 0x48EA1B4: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 5120 0x48FA523: _IO_doallocbuf (genops.c:347)
+   n1: 5120 0x48F7F8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 5120 0x48F8AAE: _IO_new_file_xsputn (fileops.c:1244)
+     n2: 5120 0x48F8AAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 4096 0x48EBA11: fwrite (iofwrite.c:39)
+       n0: 4096 0x109DC8: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+      n0: 1024 in 1 place, below massif's threshold (1.00%)
+ n0: 472 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=50
+#-----------
+time=565102776
+mem_heap_B=83992
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=565102807
+mem_heap_B=44792
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=565102838
+mem_heap_B=5592
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=565104691
+mem_heap_B=56792
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=565104735
+mem_heap_B=107992
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=565104779
+mem_heap_B=159192
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=932018888
+mem_heap_B=159192
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=detailed
+n5: 159192 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 51200 0x1093CA: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+  n0: 51200 0x109EEA: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 51200 0x1093E9: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+  n0: 51200 0x109EEA: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 51200 0x109408: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+  n0: 51200 0x109EEA: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 5120 0x48EA1B4: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 5120 0x48FA523: _IO_doallocbuf (genops.c:347)
+   n1: 5120 0x48F7F8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 5120 0x48F8AAE: _IO_new_file_xsputn (fileops.c:1244)
+     n2: 5120 0x48F8AAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 4096 0x48EBA11: fwrite (iofwrite.c:39)
+       n0: 4096 0x109DC8: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+      n0: 1024 in 1 place, below massif's threshold (1.00%)
+ n0: 472 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=57
+#-----------
+time=932018888
+mem_heap_B=107992
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=932018919
+mem_heap_B=56792
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=932018950
+mem_heap_B=5592
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=932020803
+mem_heap_B=70392
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=932020847
+mem_heap_B=135192
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=932020891
+mem_heap_B=199992
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=1453735455
+mem_heap_B=199992
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=detailed
+n5: 199992 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 64800 0x1093CA: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+  n0: 64800 0x109EEA: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 64800 0x1093E9: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+  n0: 64800 0x109EEA: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 64800 0x109408: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+  n0: 64800 0x109EEA: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 5120 0x48EA1B4: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 5120 0x48FA523: _IO_doallocbuf (genops.c:347)
+   n1: 5120 0x48F7F8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 5120 0x48F8AAE: _IO_new_file_xsputn (fileops.c:1244)
+     n2: 5120 0x48F8AAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 4096 0x48EBA11: fwrite (iofwrite.c:39)
+       n0: 4096 0x109DC8: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+      n0: 1024 in 1 place, below massif's threshold (1.00%)
+ n0: 472 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=64
+#-----------
+time=1453735455
+mem_heap_B=135192
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=1453735486
+mem_heap_B=70392
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=1453735517
+mem_heap_B=5592
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=1453737412
+mem_heap_B=85592
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=1453737456
+mem_heap_B=165592
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=1453737500
+mem_heap_B=245592
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=2168621501
+mem_heap_B=245592
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=peak
+n5: 245592 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 80000 0x1093CA: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+  n0: 80000 0x109EEA: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 80000 0x1093E9: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+  n0: 80000 0x109EEA: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 80000 0x109408: init_matrices (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+  n0: 80000 0x109EEA: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+ n1: 5120 0x48EA1B4: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 5120 0x48FA523: _IO_doallocbuf (genops.c:347)
+   n1: 5120 0x48F7F8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 5120 0x48F8AAE: _IO_new_file_xsputn (fileops.c:1244)
+     n2: 5120 0x48F8AAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 4096 0x48EBA11: fwrite (iofwrite.c:39)
+       n0: 4096 0x109DC8: main (in /home/sahast/EEE2008DemoPython/EEE2021AssessmentWork/AssessmentC/GEMM)
+      n0: 1024 in 1 place, below massif's threshold (1.00%)
+ n0: 472 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=71
+#-----------
+time=2168621501
+mem_heap_B=165592
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=2168621532
+mem_heap_B=85592
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=2168621563
+mem_heap_B=5592
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=2168621829
+mem_heap_B=1496
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=2168621967
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=2168628885
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
