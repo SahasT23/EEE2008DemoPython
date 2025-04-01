@@ -1,23 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
-#include <sys/time.h>
+#include <time.h>  
+#include <sys/time.h>  // Added these packages for timing calculations.
 
-// Number of runs to average for each test case
+// Number of 'runs' to average for each test case (best of 3, average will be )
 #define NUM_RUNS 3
 
-// Function to get current time in microseconds
+// Function to get current time in microseconds (more accurate for measurement)
+/**
+ * Can use 
+ */
 double get_time() {
     struct timeval tv;
     gettimeofday(&tv, NULL);
     return tv.tv_sec + tv.tv_usec * 1e-6;
 }
 
-/**
- * Function to allocate and initialize matrices
- */
+/*
+Initialising the matrices for AB + C.
+*/
 void init_matrices(int m, int n, int k, double **A, double **B, double **C) {
-    // Allocate memory for matrices
     *A = (double *)malloc(m * k * sizeof(double));
     *B = (double *)malloc(k * n * sizeof(double));
     *C = (double *)malloc(m * n * sizeof(double));
@@ -27,7 +29,10 @@ void init_matrices(int m, int n, int k, double **A, double **B, double **C) {
         exit(1);
     }
     
-    // Initialize A and B with random values
+    /**
+     * Initialising the values of the matrices to be between 0 and 1. 
+     * Best method I have seen so far for randomisation. 
+     */
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < k; j++) {
             (*A)[i*k + j] = (double)rand() / RAND_MAX;
@@ -40,7 +45,7 @@ void init_matrices(int m, int n, int k, double **A, double **B, double **C) {
         }
     }
     
-    // Initialize C with zeros
+    // Initialising C as a zero matrix, needed for GeMM to be done correctly.
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
             (*C)[i*n + j] = 0.0;
@@ -48,14 +53,14 @@ void init_matrices(int m, int n, int k, double **A, double **B, double **C) {
     }
 }
 
-// Function to reset matrix C to zeros
+// Resets the matrix to 0 every time.
 void reset_matrix_c(double *C, int m, int n) {
     for (int i = 0; i < m * n; i++) {
         C[i] = 0.0;
     }
 }
 
-// Function to free allocated memory
+// Clears the matrices for the next calculation. 
 void free_matrices(double *A, double *B, double *C) {
     free(A);
     free(B);
@@ -63,7 +68,17 @@ void free_matrices(double *A, double *B, double *C) {
 }
 
 /**
- * MNK implementation (row-by-row)
+ * MNK implementation (row-by-row) Time Complexity of O(n^3).
+ * The reason why it is n^3 is becuase of the 3 nested 'for' loops,
+ * The outermost loop runs 'm' times.
+ * The middle loop runs 'n' times for each iteration of the outer loop.
+ * The innermost loop runs 'k' times for each iteration of the middle loop, 
+ * So the Big O notation will amount to  O(m * n * k), -> O(n^3).
+ * Even if the loop ordering changes, it will always be O(n^3). 
+ * 
+ * Space complexity is much more simpler for this algorithm/loop ordering.
+ * Since no additional data structures are allocated within the function 
+ * (only the given matrices are used), the space complexity is O(1), regardless of loop ordering.
  */
 void mnk_gemm(int m, int n, int k, double *A, double *B, double *C) {
     for (int i = 0; i < m; i++) {
@@ -76,7 +91,9 @@ void mnk_gemm(int m, int n, int k, double *A, double *B, double *C) {
 }
 
 /**
- * MKN implementation (row-inner-column)
+ * MKN implementation (row-inner-column) Time Complexity of O(n^3).
+ * In practice, there should be very minimal difference between the different orderings,
+ * but locality should be considered for each different ordering. 
  */
 void mkn_gemm(int m, int n, int k, double *A, double *B, double *C) {
     for (int i = 0; i < m; i++) {
@@ -90,7 +107,7 @@ void mkn_gemm(int m, int n, int k, double *A, double *B, double *C) {
 }
 
 /**
- * NMK implementation (column-by-column)
+ * NMK implementation (column-by-column) Time Complexity of O(n^3)
  */
 void nmk_gemm(int m, int n, int k, double *A, double *B, double *C) {
     for (int j = 0; j < n; j++) {
@@ -103,7 +120,7 @@ void nmk_gemm(int m, int n, int k, double *A, double *B, double *C) {
 }
 
 /**
- * NKM implementation (column-inner-row)
+ * NKM implementation (column-inner-row) Time Complexity of O(n^3)
  */
 void nkm_gemm(int m, int n, int k, double *A, double *B, double *C) {
     for (int j = 0; j < n; j++) {
@@ -117,7 +134,7 @@ void nkm_gemm(int m, int n, int k, double *A, double *B, double *C) {
 }
 
 /**
- * KMN implementation (inner-row-column)
+ * KMN implementation (inner-row-column) Time Complexity of O(n^3)
  */
 void kmn_gemm(int m, int n, int k, double *A, double *B, double *C) {
     for (int p = 0; p < k; p++) {
@@ -131,7 +148,7 @@ void kmn_gemm(int m, int n, int k, double *A, double *B, double *C) {
 }
 
 /**
- * KNM implementation (inner-column-row)
+ * KNM implementation (inner-column-row) Time Complexity of O(n^3)
  */
 void knm_gemm(int m, int n, int k, double *A, double *B, double *C) {
     for (int p = 0; p < k; p++) {
@@ -145,14 +162,17 @@ void knm_gemm(int m, int n, int k, double *A, double *B, double *C) {
 }
 
 int main() {
-    // Seed the random number generator
+    // Random number generation.
     srand(time(NULL));
     
-    // Matrix sizes to test
+    /*
+    Matrix sizes to test (The jump between matrix sizes is on purpose, 
+    can clearly see the time increasing as it is a cubic relationship). 
+    */
     int sizes[] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400};
     int num_sizes = sizeof(sizes) / sizeof(sizes[0]);
     
-    // All loop orderings
+    // All loop orderings that I have used.
     typedef void (*gemm_func)(int, int, int, double*, double*, double*);
     gemm_func funcs[] = {mnk_gemm, mkn_gemm, nmk_gemm, nkm_gemm, kmn_gemm, knm_gemm};
     const char *func_names[] = {"MNK", "MKN", "NMK", "NKM", "KMN", "KNM"};
@@ -165,7 +185,7 @@ int main() {
         return 1;
     }
     
-    // Write CSV headers
+    // CSV file headers, easier for me to use for graph plotting purposes. Check the python scripts for plotting. 
     fprintf(results_file, "Matrix Size");
     for (int i = 0; i < num_funcs; i++) {
         fprintf(results_file, ",%s", func_names[i]);
@@ -181,15 +201,15 @@ int main() {
         
         fprintf(results_file, "%d", size);
         
-        // Allocate and initialize matrices
+        // Initialise matrices correctly
         double *A, *B, *C;
         init_matrices(m, n, k, &A, &B, &C);
         
-        // Benchmark each implementation
+        // Benchmark each loop ordering correctly
         for (int i = 0; i < num_funcs; i++) {
             double total_time = 0.0;
             
-            // Run the implementation NUM_RUNS times and average the results
+            // Run the implementation NUM_RUNS (3, but you can alter it) times and average the results
             for (int run = 0; run < NUM_RUNS; run++) {
                 // Reset matrix C to zeros for each run
                 reset_matrix_c(C, m, n);
@@ -219,7 +239,6 @@ int main() {
         free_matrices(A, B, C);
     }
     
-    // Close file
     fclose(results_file);
     
     printf("\nBenchmarking complete. Results saved to gemm_times.csv\n");

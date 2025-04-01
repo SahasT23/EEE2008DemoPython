@@ -7,7 +7,7 @@
 // Number of runs to average for each test case
 #define NUM_RUNS 3
 
-// Default number of threads and block size
+// Default number of threads and block size (can alter the block size and thead count by adding threads)
 #define DEFAULT_NUM_THREADS 4
 #define DEFAULT_BLOCK_SIZE 32
 
@@ -22,19 +22,17 @@ typedef struct {
     double *C;
 } thread_args_t;
 
-// Function to get current time in microseconds
-double get_time() {
+double get_time() { // Used the same method for time measurement.
     struct timeval tv;
     gettimeofday(&tv, NULL);
     return tv.tv_sec + tv.tv_usec * 1e-6;
 }
 
 /**
- * Function to allocate and initialize matrices
+ * Function to allocate and initialise matrices
  */
 void init_matrices(int m, int n, int k, double **A, double **B, double **C) {
-    // Allocate memory for matrices
-    *A = (double *)malloc(m * k * sizeof(double));
+    *A = (double *)malloc(m * k * sizeof(double)); // memory allocation for the matrices (A, B and C)
     *B = (double *)malloc(k * n * sizeof(double));
     *C = (double *)malloc(m * n * sizeof(double));
     
@@ -43,7 +41,7 @@ void init_matrices(int m, int n, int k, double **A, double **B, double **C) {
         exit(1);
     }
     
-    // Initialize A and B with random values
+    // Initialise A and B with random values between 0 and 1
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < k; j++) {
             (*A)[i*k + j] = (double)rand() / RAND_MAX;
@@ -56,7 +54,7 @@ void init_matrices(int m, int n, int k, double **A, double **B, double **C) {
         }
     }
     
-    // Initialize C with zeros
+    // Initialise C with zeros
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
             (*C)[i*n + j] = 0.0;
@@ -64,14 +62,12 @@ void init_matrices(int m, int n, int k, double **A, double **B, double **C) {
     }
 }
 
-// Function to reset matrix C to zeros
 void reset_matrix_c(double *C, int m, int n) {
     for (int i = 0; i < m * n; i++) {
         C[i] = 0.0;
     }
 }
 
-// Function to free allocated memory
 void free_matrices(double *A, double *B, double *C) {
     free(A);
     free(B);
@@ -80,6 +76,7 @@ void free_matrices(double *A, double *B, double *C) {
 
 /**
  * 1. Original MNK implementation (row-by-row)
+ * Only using MNK for this, don't want the graph to look weird and jumbled together.
  */
 void mnk_gemm(int m, int n, int k, double *A, double *B, double *C) {
     for (int i = 0; i < m; i++) {
@@ -93,9 +90,10 @@ void mnk_gemm(int m, int n, int k, double *A, double *B, double *C) {
 
 /**
  * 2. Blocked/Tiled MNK implementation
+ * Need to integrate this into my report later.
  */
 void blocked_mnk_gemm(int m, int n, int k, double *A, double *B, double *C, int block_size) {
-    // Iterate over blocks
+    // Iterate over 'blocks'
     for (int i0 = 0; i0 < m; i0 += block_size) {
         int i_bound = (i0 + block_size < m) ? i0 + block_size : m;
         
@@ -120,6 +118,7 @@ void blocked_mnk_gemm(int m, int n, int k, double *A, double *B, double *C, int 
 
 /**
  * Thread function for multithreaded MNK implementation
+ * (check later, maybe not the best opion)
  */
 void* mt_mnk_thread(void *arg) {
     thread_args_t *args = (thread_args_t *)arg;
@@ -178,6 +177,7 @@ void mt_mnk_gemm(int m, int n, int k, double *A, double *B, double *C, int num_t
 
 /**
  * Thread function for combined multithreaded and blocked MNK implementation
+ * Probably no t the best idea, might not be the most efficient.
  */
 void* mt_blocked_mnk_thread(void *arg) {
     thread_args_t *args = (thread_args_t *)arg;
@@ -200,7 +200,8 @@ void* mt_blocked_mnk_thread(void *arg) {
     int start_i = start_block * block_size;
     int end_i = (end_block * block_size < m) ? end_block * block_size : m;
     
-    // Iterate over blocks assigned to this thread
+    // Iterate over blocks assigned to this thread.
+    // Complexity is higher than just multithreading.
     for (int i0 = start_i; i0 < end_i; i0 += block_size) {
         int i_bound = (i0 + block_size < m) ? i0 + block_size : m;
         
